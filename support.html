@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BackAgain?! support: contact and answers to common questions.">
+  <meta name="description" content="BackAgain?! support: how the shield, adaptive protection, daily limits, the score, Patterns and Pro work, troubleshooting and contact.">
   <title>Support | BackAgain?!</title>
   <style>
     /* BackAgain?! brand: warm paper, ink, marker lime. The wordmark is SF Pro
@@ -55,6 +55,22 @@
       main { padding-top: 38px; }
       .summary { padding: 18px; }
     }
+
+    /* Support page only: contents, tables, callouts. */
+    .toc { display: block; font-size: 1rem; margin: 34px 0 10px; padding: 22px 26px; border-radius: 18px; background: var(--card); }
+    .toc h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); margin-bottom: 8px; }
+    .toc ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 28px; }
+    .toc li { break-inside: avoid; margin: 0 0 6px; }
+    .toc li + li { margin-top: 0; }
+    h3 { margin: 22px 0 6px; font-size: 1.06rem; font-weight: 900; letter-spacing: -.015em; }
+    table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: .95rem; }
+    th, td { text-align: left; vertical-align: top; padding: 9px 10px; border-bottom: 1px solid var(--rule); }
+    th { font-size: .78rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+    td.num { white-space: nowrap; font-weight: 800; }
+    .note { margin: 14px 0; padding: 14px 18px; border-left: 4px solid var(--lime); background: var(--card); border-radius: 0 12px 12px 0; }
+    .pro { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 999px; background: var(--lime); font-size: .72rem; font-weight: 900; letter-spacing: .05em; vertical-align: 2px; }
+    kbd { font-family: inherit; font-weight: 800; }
+    @media (max-width: 550px) { .toc ol { columns: 1; } table { font-size: .9rem; } th, td { padding: 8px 6px; } }
   </style>
 </head>
 <body>
@@ -64,36 +80,224 @@
   <main id="content">
     <p class="eyebrow">Help</p>
     <h1>Support</h1>
-    <p class="lead">Something not working? Most answers are below. If not, write to us.</p>
+    <p class="lead">How BackAgain?! works, section by section — and what to do when something doesn't.</p>
     <p class="updated">Last updated: September 24, 2026</p>
 
     <div class="summary">
-      <p><strong>Write to us:</strong> <a href="mailto:apps.supporthub@gmail.com?subject=BackAgain%3F!%20support">apps.supporthub@gmail.com</a> — tell us your iPhone model, iOS version and what happened. We usually reply within a few days.</p>
+      <p><strong>Need a person?</strong> Write to <a href="mailto:apps.supporthub@gmail.com?subject=BackAgain%3F!%20support">apps.supporthub@gmail.com</a> with your iPhone model, iOS version and what happened.</p>
     </div>
 
-    <section>
-      <h2>A protected app won't open, or the shield is stuck</h2>
-      <p>Open BackAgain?! once: it checks and repairs the shield every time it comes to the front. If an app is still blocked when it shouldn't be, check Settings › Screen Time on your iPhone, then write to us.</p>
-    </section>
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+          <li><a href="#start">Getting started</a></li>
+          <li><a href="#shield">The shield</a></li>
+          <li><a href="#levels">Adaptive protection</a></li>
+          <li><a href="#sessions">Sessions, planned sessions and End now</a></li>
+          <li><a href="#limit">The daily limit</a></li>
+          <li><a href="#passes">Emergency passes</a></li>
+          <li><a href="#commitment">Commitment level, PIN and pausing</a></li>
+          <li><a href="#today">Today and the Under control score</a></li>
+          <li><a href="#patterns">Patterns</a></li>
+          <li><a href="#widgets">Widgets, Live Activity and Focus</a></li>
+          <li><a href="#pro">Free and Pro</a></li>
+          <li><a href="#trouble">Troubleshooting</a></li>
+          <li><a href="#privacy">Your data</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
 
-    <section>
-      <h2>Stop protecting an app</h2>
-      <p>In BackAgain?!, open Shield, tap the app, then "Stop protecting this app". There is a short wait first — on purpose.</p>
+    <section id="start">
+      <h2>Getting started</h2>
+      <p>BackAgain?! puts a moment of friction between you and the apps you open without deciding to. It does not block them forever and it does not judge you: it asks why you are there, gives you exactly the time you asked for, and keeps honest receipts.</p>
+      <h3>Setting it up</h3>
+      <ol>
+        <li><strong>Allow Screen Time access.</strong> BackAgain?! uses Apple's Screen Time frameworks to place a shield over the apps you choose. iOS asks for your permission once, with your passcode or Face ID.</li>
+        <li><strong>Pick your usual suspect.</strong> Choose the app you open most automatically. The free plan protects up to two apps; start with one.</li>
+        <li><strong>That's it.</strong> The next time you open that app, the shield appears first.</li>
+      </ol>
+      <div class="note">BackAgain?! never sees what you do inside an app, and your history never leaves your iPhone. See the <a href="privacy.html">Privacy Policy</a>.</div>
     </section>
-
-    <section>
-      <h2>Restore a purchase</h2>
-      <p>Open Settings in BackAgain?! and tap "Restore purchases", signed in with the Apple ID you bought Pro with.</p>
+    <section id="shield">
+      <h2>The shield</h2>
+      <p>When you open a protected app, the shield comes first. You have two choices:</p>
+      <ul>
+        <li><strong>Never mind</strong> closes the app. It counts as <em>walked away</em> — the best thing you can do, and it lifts your score.</li>
+        <li><strong>Choose reason</strong> asks what you came for, and opens the app for that long only.</li>
+      </ul>
+      <h3>The three reasons</h3>
+      <table>
+        <tr><th>Reason</th><th>For</th><th>Time (at Calm)</th></tr>
+        <tr><td><strong>In and out</strong></td><td>A reply, a quick check of one thing</td><td class="num">2 min</td></tr>
+        <tr><td><strong>One thing. Really.</strong></td><td>A specific task you can name</td><td class="num">5 min</td></tr>
+        <tr><td><strong>Scroll, honestly</strong></td><td>Browsing, and admitting it</td><td class="num">10 min</td></tr>
+      </table>
+      <p>When the time is up, the shield comes back on its own. The times get shorter as the adaptive level rises — see below.</p>
+      <h3>Four different shields</h3>
+      <ul>
+        <li><strong>An ordinary open</strong> — the usual question.</li>
+        <li><strong>A quick return</strong> — you came back within minutes of closing it, and the shield says so.</li>
+        <li><strong>Straight from another protected app</strong> — hopping from one to the next is noticed too.</li>
+        <li><strong>The end of a session</strong> — the time you asked for is over. Now and then it asks <em>"Was that worth it?"</em>; your answers make the protection stricter or gentler.</li>
+      </ul>
     </section>
-
-    <section>
-      <h2>Cancel a subscription</h2>
-      <p>On your iPhone: Settings › your name › Subscriptions › BackAgain?! Pro. Or in BackAgain?!: Settings › Manage subscription. Refunds are requested from Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+    <section id="levels">
+      <h2>Adaptive protection</h2>
+      <p>Each protected app has a level, shown in the Shield tab. It rises when your use starts to look like a loop and eases off when it calms down. Nothing is hidden: tap <kbd>Why these levels</kbd> in Shield to see exactly what moved it.</p>
+      <table>
+        <tr><th>Level</th><th>What changes</th></tr>
+        <tr><td><strong>Calm</strong></td><td>Normal friction and the full times.</td></tr>
+        <tr><td><strong>Busy</strong></td><td>Slightly shorter sessions.</td></tr>
+        <tr><td><strong>Heavy</strong></td><td>Shorter again: 2, 3 and 5 minutes.</td></tr>
+        <tr><td><strong>Looping</strong></td><td>"Scroll, honestly" is no longer offered.</td></tr>
+        <tr><td><strong>Relentless</strong></td><td>No reasons at all. The only way in is an emergency pass, if you have one left.</td></tr>
+      </table>
+      <h3>What raises it</h3>
+      <ul>
+        <li>Coming straight back after a session ends.</li>
+        <li>Several opens in a short window.</li>
+        <li>Overrides and emergency passes.</li>
+        <li>Opening at the time of day when you usually slip.</li>
+        <li>Answering "Not worth it" at the end of sessions.</li>
+        <li>Jumping straight from one protected app to another.</li>
+      </ul>
+      <h3>What lowers it</h3>
+      <ul>
+        <li>Time: quiet periods bring it back down on their own.</li>
+        <li>Planning a session in advance.</li>
+        <li>Ending a session before the timer does.</li>
+      </ul>
     </section>
-
-    <section>
+    <section id="sessions">
+      <h2>Sessions, planned sessions and End now</h2>
+      <h3>A running session</h3>
+      <p>While a session runs, a countdown appears on the Lock Screen and in the Dynamic Island. Tap <kbd>End now</kbd> there to stop early: the shield comes straight back over the app, without opening BackAgain?!, and ending early counts in your favour.</p>
+      <h3>Planned sessions</h3>
+      <p>From the app's card in Shield, <kbd>Start a session…</kbd> lets you decide the reason and the length <em>before</em> you open the app. After a short wait of 45 seconds — the wait is what shows you meant it — you get up to one and a half times what the shield would give, and a lower level afterwards.</p>
+      <ul>
+        <li>Planned sessions a day depend on your commitment level: 4, 3 or 2.</li>
+        <li>They are not available at Relentless.</li>
+        <li>One session per app at a time.</li>
+      </ul>
+    </section>
+    <section id="limit">
+      <h2>The daily limit</h2>
+      <p>Every protected app has a daily limit: the most time it gets in a day, however you get in. It starts at 90 minutes and can be set from 15 minutes to 3 hours, in 15-minute steps, from the app's card in Shield.</p>
+      <ul>
+        <li><strong>Lowering it</strong> is instant.</li>
+        <li><strong>Raising it</strong> costs a one-minute wait, plus your PIN if you set one. Your very first change is free.</li>
+        <li><strong>When it's reached</strong>, the app stays shielded until midnight — whatever its level.</li>
+        <li><strong>Lifting a limit you already reached</strong> lets you back in, and costs your score the most of anything.</li>
+      </ul>
+      <p>Time is counted by iOS in steps of a quarter of the limit, so BackAgain?! shows how much you have used as "at least".</p>
+    </section>
+    <section id="passes">
+      <h2>Emergency passes</h2>
+      <p>For when it really is urgent. A pass opens a protected app for 10 minutes with no questions, even at Relentless — but not past a daily limit you have reached. Passes come back on a rolling seven days.</p>
+      <table>
+        <tr><th>Commitment level</th><th>Passes per 7 days</th></tr>
+        <tr><td>Easy out</td><td class="num">5</td></tr>
+        <tr><td>Make me wait</td><td class="num">3</td></tr>
+        <tr><td>Don't let me wiggle out</td><td class="num">1</td></tr>
+      </table>
+      <p>A pass is an honest way around the shield, and it still counts against your score.</p>
+    </section>
+    <section id="commitment">
+      <h2>Commitment level, PIN and pausing</h2>
+      <p>In Settings, <kbd>How hard should we make it?</kbd> sets how much effort it takes to weaken your own protection.</p>
+      <table>
+        <tr><th>Level</th><th>Pausing the rules</th><th>Passes / week</th><th>Planned / day</th></tr>
+        <tr><td><strong>Easy out</strong></td><td>Instant</td><td class="num">5</td><td class="num">4</td></tr>
+        <tr><td><strong>Make me wait</strong></td><td>A wait of 15 to 75 seconds, longer at higher levels</td><td class="num">3</td><td class="num">3</td></tr>
+        <tr><td><strong>Don't let me wiggle out</strong></td><td>A wait of 1 to 3 minutes; not possible at Relentless</td><td class="num">1</td><td class="num">2</td></tr>
+      </table>
+      <ul>
+        <li><strong>PIN.</strong> An optional four-digit PIN guards the settings that weaken protection, such as raising a limit. It never guards the shield itself. It is stored on your iPhone as a salted hash.</li>
+        <li><strong>Pause the rules</strong> (in Shield) switches protection off until you turn it back on. Turning it back on is always instant.</li>
+        <li><strong>Stop protecting an app</strong> (on its card) always waits at least a minute first.</li>
+      </ul>
+    </section>
+    <section id="today">
+      <h2>Today and the Under control score</h2>
+      <p>Today shows your <strong>Under control</strong> score, from 0 to 100, how it compares with yesterday, and four numbers: how many times you <em>let yourself in</em>, your <em>back-agains</em>, how often you <em>walked away</em>, and how much of your daily limit you have used. Below, one line says what the day was mostly about, with a next step when there is one.</p>
+      <p>Tap the score to see exactly what moved it. Every day starts at 100:</p>
+      <table>
+        <tr><th>What happened</th><th>Effect</th></tr>
+        <tr><td>Each time you let yourself in, after the first two of the day</td><td class="num">−3</td></tr>
+        <tr><td>Each back-again (in again within 20 minutes of a session ending)</td><td class="num">−5</td></tr>
+        <tr><td>Each open inside a burst (three or more in 15 minutes)</td><td class="num">−3</td></tr>
+        <tr><td>Each override or emergency pass</td><td class="num">−5</td></tr>
+        <tr><td>Your daily limit, on a curve: a quarter used, half, all of it</td><td class="num">−3 · −10 · −40</td></tr>
+        <tr><td>Each time you lift a limit you already reached</td><td class="num">−15</td></tr>
+        <tr><td>Each time you walk away (up to +10)</td><td class="num">+2</td></tr>
+        <tr><td>Each session you end early (up to +10)</td><td class="num">+2</td></tr>
+      </table>
+      <p>There is no ceiling on the costs: doing the wrong thing again always costs again. The score itself never goes below 0 or above 100.</p>
+      <div class="note">The score is a receipt of what you did, not a judgement of who you are — and not a medical or psychological measure.</div>
+    </section>
+    <section id="patterns">
+      <h2>Patterns</h2>
+      <ul>
+        <li><strong>One thing to notice.</strong> The strongest pattern in your last 28 days — a time of day, a day of the week, one app carrying the loop — with the evidence and a next step. <span class="pro">PRO</span> shows every pattern found.</li>
+        <li><strong>Charts.</strong> Your score over time, your back-agains per day, and your minutes against your daily limit. Only days with recorded data are shown.</li>
+        <li><strong>The week in numbers</strong>, what you said you needed, and <strong>which app got you</strong>.</li>
+        <li><strong>Ranges.</strong> The last 7 days on Free; 1, 3, 6 months and a year with <span class="pro">PRO</span>. Your history stays on your iPhone for up to a year.</li>
+      </ul>
+    </section>
+    <section id="widgets">
+      <h2>Widgets, Live Activity and Focus</h2>
+      <ul>
+        <li><strong>Widgets.</strong> Add BackAgain?! to your Home Screen, small or medium, for your score and today's numbers at a glance. During a session, both show the countdown with a stop button.</li>
+        <li><strong>Live Activity.</strong> Each planned session shows a countdown on the Lock Screen and in the Dynamic Island, with <kbd>End now</kbd>.</li>
+        <li><strong>Focus</strong> <span class="pro">PRO</span>. In iPhone Settings › Focus, add the BackAgain?! filter to a Focus — Work keeps friction slightly raised, Sleep keeps it raised. It can only make protection stricter, never weaker.</li>
+        <li><strong>Shortcuts and Siri</strong> <span class="pro">PRO</span>. Raise friction for a while, restore it, or ask for today's score — from Shortcuts, automations or Siri.</li>
+        <li><strong>Weekly receipt</strong> <span class="pro">PRO</span>. One notification a week with what changed. No streaks, no "we miss you".</li>
+      </ul>
+    </section>
+    <section id="pro">
+      <h2>Free and Pro</h2>
+      <p>The rule is simple: everything that protects you is free. Pro adds depth.</p>
+      <table>
+        <tr><th></th><th>Free</th><th>Pro</th></tr>
+        <tr><td>Protected apps</td><td>2</td><td>As many as you need</td></tr>
+        <tr><td>Shield, adaptive levels, daily limit, planned sessions, score</td><td>✓</td><td>✓</td></tr>
+        <tr><td>History</td><td>7 days</td><td>1, 3, 6 months and a year</td></tr>
+        <tr><td>Patterns</td><td>The strongest one</td><td>Every one found</td></tr>
+        <tr><td>Weekly receipt, Focus, Shortcuts and Siri</td><td>—</td><td>✓</td></tr>
+      </table>
+      <h3>Plans</h3>
+      <p>Yearly, with a free week the first time; monthly; or once, for good. Current prices are shown in the app before you buy. Subscriptions renew automatically until you cancel them.</p>
+      <h3>Restore, manage, cancel</h3>
+      <ul>
+        <li><strong>Restore</strong>: Settings › Restore purchases, signed in with the Apple ID you used.</li>
+        <li><strong>Manage or cancel</strong>: Settings › Manage subscription in BackAgain?!, or iPhone Settings › your name › Subscriptions. Cancel at least 24 hours before renewal.</li>
+        <li><strong>Refunds</strong> are handled by Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
+      </ul>
+      <h3>When Pro ends</h3>
+      <p>BackAgain?! keeps protecting your first two apps. Any others are paused — not protected — but kept with their history, and protected again if Pro comes back.</p>
+    </section>
+    <section id="trouble">
+      <h2>Troubleshooting</h2>
+      <h3>"The shield is off" when I open BackAgain?!</h3>
+      <p>Screen Time access was switched off. Tap the button on that screen to allow it again, or check iPhone Settings › Screen Time.</p>
+      <h3>A protected app opened without the shield</h3>
+      <p>Open BackAgain?! once: it checks every protected app and puts back any shield that went missing. A session may also still be running — its countdown is on the Lock Screen.</p>
+      <h3>An app is blocked and it shouldn't be</h3>
+      <p>Check whether its daily limit is reached (its card in Shield says so) or whether it is at Relentless. If neither, open BackAgain?! and then write to us.</p>
+      <h3>The countdown isn't on the Lock Screen</h3>
+      <p>Make sure Live Activities are on for BackAgain?! in iPhone Settings › BackAgain?!. Opening the app restores a missing countdown for a planned session still running.</p>
+      <h3>The widget is out of date</h3>
+      <p>iOS refreshes widgets on its own schedule. Opening BackAgain?! updates it straight away.</p>
+      <h3>Removing BackAgain?!</h3>
+      <p>Deleting the app removes its shields and deletes its history from your iPhone.</p>
+    </section>
+    <section id="privacy">
       <h2>Your data</h2>
-      <p>Your history stays on your iPhone and is never sent to us. See the <a href="privacy.html">Privacy Policy</a>.</p>
+      <p>No account. No ads. No analytics. Your protected apps, sessions and history stay on your iPhone and are never sent to us. Purchases are handled by Apple. The details are in the <a href="privacy.html">Privacy Policy</a> and the <a href="termsandconditions.html">Terms and Conditions</a>.</p>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Write to <a href="mailto:apps.supporthub@gmail.com?subject=BackAgain%3F!%20support">apps.supporthub@gmail.com</a>. Tell us your iPhone model, your iOS version, and what happened — a screenshot helps. Please don't send passwords or your PIN.</p>
     </section>
   </main>
 
