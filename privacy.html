@@ -3,40 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BackAgain privacy policy: how the app uses and stores data on your device.">
-  <title>Privacy Policy | BackAgain</title>
+  <meta name="description" content="BackAgain?! privacy policy: how the app uses and stores data on your device.">
+  <title>Privacy Policy | BackAgain?!</title>
   <style>
+    /* BackAgain?! brand: warm paper, ink, marker lime. The wordmark is SF Pro
+       Black, as in the app — the system font on Apple devices. */
     :root {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #201d25;
-      background: #f7f5f1;
-      line-height: 1.65;
+      --paper: #F4F3EE;
+      --card: #EAE9E3;
+      --ink: #0A0A0A;
+      --ink-2: rgba(10,10,10,.62);
+      --ink-3: rgba(10,10,10,.45);
+      --rule: rgba(10,10,10,.12);
+      --lime: #CBFF00;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
     }
     * { box-sizing: border-box; }
     body { margin: 0; }
-    a { color: #5140a0; text-underline-offset: 3px; }
-    a:hover { color: #332274; }
-    a:focus-visible { outline: 3px solid #725ce0; outline-offset: 4px; border-radius: 2px; }
+    a { color: var(--ink); font-weight: 700; text-decoration-color: var(--lime); text-decoration-thickness: 3px; text-underline-offset: 3px; }
+    a:hover { background: var(--lime); }
+    a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
     .skip-link { position: absolute; left: -9999px; top: 12px; }
-    .skip-link:focus { left: 16px; z-index: 10; padding: 8px 12px; background: white; }
-    header { border-bottom: 1px solid #e6e1db; background: #fffdf9; }
+    .skip-link:focus { left: 16px; z-index: 10; padding: 8px 12px; background: var(--lime); }
+    header { border-bottom: 1px solid var(--rule); }
     .header-inner, main, footer { width: min(100% - 40px, 760px); margin-inline: auto; }
-    .header-inner { min-height: 76px; display: flex; align-items: center; }
-    .brand { font-size: 1.1rem; font-weight: 800; letter-spacing: -.035em; }
-    .brand::before { content: ""; display: inline-block; width: 12px; height: 12px; margin-right: 9px; border-radius: 4px; background: #725ce0; transform: rotate(-12deg); }
+    .header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .brand { display: inline-flex; align-items: center; gap: 8px; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; font-size: 1.3rem; font-weight: 900; letter-spacing: -.04em; color: var(--ink); text-decoration: none; }
+    .brand:hover { background: none; }
+    .brand::after { content: ""; width: 22px; height: 4px; background: var(--lime); }
+    nav { display: flex; gap: 18px; font-size: .92rem; }
+    nav a { text-decoration: none; font-weight: 800; }
+    nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--lime); text-decoration-thickness: 3px; }
     main { padding-block: 54px 72px; }
-    .eyebrow { margin: 0 0 10px; color: #6d617a; font-size: .8rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
-    h1 { margin: 0; font-size: clamp(2.3rem, 6vw, 4rem); line-height: 1.08; letter-spacing: -.055em; }
-    .lead { max-width: 670px; margin: 20px 0 0; font-size: 1.14rem; color: #514c57; }
-    .updated { margin-top: 20px; font-size: .9rem; color: #625b69; }
-    .summary { margin: 32px 0 40px; padding: 22px 26px; border: 1px solid #d7ceef; border-radius: 18px; background: #f0ebff; }
+    .eyebrow { margin: 0 0 10px; color: var(--ink-3); font-size: .8rem; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(2.4rem, 7vw, 4.2rem); font-weight: 900; line-height: 1.02; letter-spacing: -.055em; text-transform: uppercase; }
+    .lead { max-width: 670px; margin: 20px 0 0; font-size: 1.16rem; font-weight: 600; color: var(--ink-2); }
+    .updated { margin-top: 18px; font-size: .9rem; color: var(--ink-3); }
+    .summary { margin: 32px 0 40px; padding: 22px 26px; border-radius: 18px; background: var(--lime); }
     .summary p { margin: 0; }
-    section { padding: 22px 0; border-top: 1px solid #e1dcd5; }
-    h2 { margin: 0 0 10px; font-size: 1.34rem; line-height: 1.3; letter-spacing: -.025em; }
+    section { padding: 22px 0; border-top: 1px solid var(--rule); }
+    h2 { margin: 0 0 10px; font-size: 1.34rem; font-weight: 900; line-height: 1.3; letter-spacing: -.025em; }
     p { margin: 10px 0; }
     ul { margin: 10px 0; padding-left: 22px; }
     li + li { margin-top: 8px; }
-    footer { padding: 24px 0 40px; border-top: 1px solid #e1dcd5; font-size: .88rem; color: #625b69; }
+    footer { padding: 24px 0 40px; border-top: 1px solid var(--rule); font-size: .88rem; color: var(--ink-3); }
     @media (max-width: 550px) {
       .header-inner, main, footer { width: min(100% - 32px, 760px); }
       main { padding-top: 38px; }
@@ -46,42 +59,42 @@
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
-  <header><div class="header-inner"><div class="brand">BackAgain</div></div></header>
+  <header><div class="header-inner"><span class="brand">BackAgain?!</span></div></header>
 
   <main id="content">
     <p class="eyebrow">Your privacy</p>
     <h1>Privacy Policy</h1>
-    <p class="lead">BackAgain helps you manage access to apps you choose to protect. Your behavioral history stays on your device; the developer does not receive it.</p>
+    <p class="lead">BackAgain?! helps you manage access to apps you choose to protect. Your behavioral history stays on your device; the developer does not receive it.</p>
     <p class="updated">Last updated: September 24, 2026</p>
 
     <div class="summary">
-      <p><strong>In short:</strong> BackAgain does not require an account, use advertising or analytics SDKs, or send your protected-app choices, sessions or behavioral history to a developer-operated server.</p>
+      <p><strong>In short:</strong> BackAgain?! does not require an account, use advertising or analytics SDKs, or send your protected-app choices, sessions or behavioral history to a developer-operated server.</p>
     </div>
 
     <section>
-      <h2>Who provides BackAgain</h2>
-      <p>BackAgain is developed by Andrè Finetti Cangussù. For privacy questions or data requests, contact <a href="mailto:apps.supporthub@gmail.com">apps.supporthub@gmail.com</a>.</p>
+      <h2>Who provides BackAgain?!</h2>
+      <p>BackAgain?! is developed by Andrè Finetti Cangussù. For privacy questions or data requests, contact <a href="mailto:apps.supporthub@gmail.com">apps.supporthub@gmail.com</a>.</p>
     </section>
 
     <section>
       <h2>Data used on your device</h2>
-      <p>To provide the features you choose to use, BackAgain processes and stores locally:</p>
+      <p>To provide the features you choose to use, BackAgain?! processes and stores locally:</p>
       <ul>
         <li>The apps you choose to protect, represented by Apple's Screen Time tokens. When available, an app name may be stored locally so accessibility features can identify it.</li>
         <li>Preferences and settings, such as daily limits, protection level, reminders and an optional PIN. The PIN is stored as a salted hash, not in plain text. Screen Time permission status is checked locally.</li>
         <li>Session and protection events, including times, granted duration, selected intent, returns to an app, Emergency Pass use and any answers to prompts. These events support shields, statistics and troubleshooting.</li>
       </ul>
-      <p>BackAgain does not read your messages, what you post or the content you view inside protected apps.</p>
+      <p>BackAgain?! does not read your messages, what you post or the content you view inside protected apps.</p>
     </section>
 
     <section>
       <h2>Storage and sharing</h2>
-      <p>App data is kept in local iOS storage, including an App Group shared by BackAgain, its Screen Time extensions and its widget. BackAgain does not transmit that data to the developer or to advertising or analytics services. Device backups, if any, are managed by iOS under your Apple settings.</p>
+      <p>App data is kept in local iOS storage, including an App Group shared by BackAgain?!, its Screen Time extensions and its widget. BackAgain?! does not transmit that data to the developer or to advertising or analytics services. Device backups, if any, are managed by iOS under your Apple settings.</p>
     </section>
 
     <section>
       <h2>TestFlight and support</h2>
-      <p>If you use a TestFlight build, Apple may make beta metrics, crash reports and the feedback you submit through TestFlight available to the developer, including screenshots you attach. These channels do not automatically upload the behavioral history stored by BackAgain.</p>
+      <p>If you use a TestFlight build, Apple may make beta metrics, crash reports and the feedback you submit through TestFlight available to the developer, including screenshots you attach. These channels do not automatically upload the behavioral history stored by BackAgain?!.</p>
       <p>If you email us, we receive your sender address and message. We use them to respond and handle your request, keeping them only as long as necessary or as required by applicable obligations.</p>
     </section>
 
@@ -96,6 +109,6 @@
     </section>
   </main>
 
-  <footer>BackAgain · Privacy Policy · <a href="mailto:apps.supporthub@gmail.com">apps.supporthub@gmail.com</a></footer>
+  <footer>BackAgain?! · Privacy Policy · <a href="mailto:apps.supporthub@gmail.com">apps.supporthub@gmail.com</a></footer>
 </body>
 </html>
